@@ -62,7 +62,7 @@ h1 span, h2 span { color: var(--yellow); }
 .scroll-cue { position: absolute; bottom: 26px; left: 0; color: #777; font-size: 8px; display: flex; align-items: center; gap: 12px; }
 .scroll-cue span { height: 1px; width: 35px; background: var(--yellow); }
 .ticker { background: var(--yellow); color: #080808; overflow: hidden; transform: rotate(-1deg) scale(1.02); padding: 17px 0; }
-.ticker-track { display: flex; width: max-content; align-items: center; gap: 28px; animation: ticker 26s linear infinite; font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 2px; }
+.ticker-track { display: flex; width: max-content; align-items: center; gap: 28px; animation: ticker 35s linear infinite; font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 2px; }
 .ticker-track i { font-style: normal; font-size: 17px; }
 @keyframes ticker { to { transform: translateX(-50%); } }
 .section-label { color: #888881; font-size: 9px; }
@@ -229,3 +229,13 @@ h2 { font-size: clamp(38px, 5vw, 62px); line-height: 1.08; letter-spacing: -3px;
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Venture 05: Web Development Hub */
+.venture-card-link { display: block; }
+.art-web { background: radial-gradient(ellipse at 50% 80%, #1c2a2b, #121516 70%); }
+.browser-shape { width: 136px; height: 92px; border: 3px solid var(--yellow); border-radius: 8px; position: relative; z-index: 1; background: #12120d; padding: 24px 12px 0; display: flex; flex-direction: column; gap: 7px; box-shadow: 0 0 30px #ffd90018; }
+.browser-shape:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 15px; border-bottom: 2px solid var(--yellow); background: radial-gradient(circle at 9px 7px, var(--yellow) 2px, transparent 3px), radial-gradient(circle at 19px 7px, var(--yellow) 2px, transparent 3px), radial-gradient(circle at 29px 7px, var(--yellow) 2px, transparent 3px); }
+.browser-shape i { display: block; height: 6px; width: 80%; background: #b7b7a5; border-radius: 2px; }
+.browser-shape i:nth-child(2) { width: 55%; margin-left: 14px; background: var(--yellow); }
+.browser-shape i:nth-child(3) { width: 68%; margin-left: 14px; }
+.code-badge { position: absolute; z-index: 2; left: calc(50% + 40px); bottom: 36px; padding: 2px 10px; background: var(--yellow); color: #080808; border-radius: 4px; font-family: var(--font-display); font-size: 18px; font-weight: 700; }
