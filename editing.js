@@ -53,3 +53,8 @@ form.addEventListener("submit", e => {
   status.textContent = "Your email app should open with the request ready to send. This form doesn't send messages directly.";
   window.location.href = `mailto:${STUDIO_EMAIL}?subject=${subject}&body=${body}`;
 });
+const video = document.getElementById("editedVideo");
+
+video.addEventListener("contextmenu", e => {
+  e.preventDefault();
+});
