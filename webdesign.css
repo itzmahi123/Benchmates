@@ -3,9 +3,14 @@
 :focus-visible{outline:2px solid var(--y);outline-offset:3px}
 h1,h2,h3{font-family:var(--d);font-weight:500;margin:0}h1 em,h2 em{font-style:normal;color:var(--y)}
 .header{position:sticky;top:0;z-index:20;height:72px;padding:0 max(24px,calc((100vw - 1200px)/2));display:flex;align-items:center;justify-content:space-between;background:#090909ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:10px;font:700 17px var(--d)}.brand i{font-style:normal;color:var(--y)}.mark{width:34px;height:34px;border:2px solid var(--y);border-radius:50%;display:grid;place-items:center}
+.brand{display:flex;align-items:center;gap:10px;font:700 17px var(--d)}
+.brand img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.yellow{color:var(--yellow)}
 nav{display:flex;align-items:center;gap:28px;font-size:14px;color:#e0e0db}nav>a:hover{color:var(--y)}nav .cta{padding:10px 16px;border:1px solid #fff7;transition:.2s}nav .cta:hover{background:var(--y);color:#080808}.menu{display:none}
 .hero{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;padding:72px max(24px,calc((100vw - 1200px)/2)) 88px}
+.ticker{overflow:hidden;background:var(--y);color:#090909;padding:13px 0;transform: rotate(-1deg) scale(1.02);white-space:nowrap;font:700 12px var(--d);letter-spacing:1.5px}
+.ticker div{min-width:max-content;animation:scroll 32s linear infinite}
+.ticker i{font-style:normal;padding:0 28px}@keyframes scroll{to{transform:translateX(-30%)}}.section{padding:100px max(24px,calc((100vw - 1200px)/2))}
 .tag{margin:0 0 18px;color:var(--y);font-weight:700;font-size:14px}h1{font-size:clamp(44px,6vw,86px);line-height:.98;letter-spacing:-3px}.lead{color:#c9c9c2;max-width:480px;margin:24px 0 30px}
 .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.solid{background:var(--y);color:#090909}.solid:hover{background:#ffeb55}.line{border-color:#fff7}.line:hover{border-color:var(--y);color:var(--y)}
 .stats{list-style:none;padding:0;margin:40px 0 0;display:flex;gap:32px;flex-wrap:wrap;color:var(--m);font-size:14px}.stats b{display:block;color:var(--w);font:500 20px var(--d)}
