@@ -1,7 +1,6 @@
 {
   "name": "Benchmates",
   "short_name": "Benchmates",
-  "description": "One bond. Many ventures. One vision.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -9,16 +8,16 @@
   "theme_color": "#0B0B0B",
   "icons": [
     {
-      "src": "./logo.png",
-      "sizes": "3264x3264",
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./logo.png",
-      "sizes": "3264x3264",
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ]
 }
