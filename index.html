@@ -18,13 +18,13 @@
 <meta property="og:title" content="Benchmates | Creative Digital Studio">
 <meta property="og:description" content="Benchmates — one bond, many ventures, one vision. Discover our growing world of creativity, hospitality, style, and new ideas.">
 <meta property="og:url" content="https://itzmahi123.github.io/Benchmates/">
-<meta property="og:image" content="https://itzmahi123.github.io/Benchmates/logo.jpeg">
+<meta property="og:image" content="https://itzmahi123.github.io/Benchmates/logo.png">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Benchmates — One Bond. Many Ventures.">
 <meta name="twitter:description" content="Benchmates — one bond, many ventures, one vision. Discover our growing world of creativity, hospitality, style, and new ideas.">
-<meta name="twitter:image" content="https://itzmahi123.github.io/Benchmates/logo.jpeg">
+<meta name="twitter:image" content="https://itzmahi123.github.io/Benchmates/logo.png">
 
 <!-- Canonical URL -->
 <link rel="canonical" href="https://itzmahi123.github.io/Benchmates/">
@@ -403,5 +403,15 @@
     <div class="footer-main section-wrap"><a class="brand footer-brand" href="#top"><img src="logo.png" alt=""><span>BENCHMATES<span class="brand-dot">.</span></span></a><p>One bond. Many ventures. One vision.</p><a class="back-top" href="#top">BACK TO TOP ↑</a></div>
     <div class="footer-bottom section-wrap"><span>© <span id="year"></span> BENCHMATES. ALL RIGHTS RESERVED.</span><span>BUILT BY FRIENDS, FOR THE FUTURE.</span></div>
   </footer>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+          .catch((error) => console.error("Benchmates service worker:", error));
+      });
+    }
+  </script>
+
 </body>
 </html>
