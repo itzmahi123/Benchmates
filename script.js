@@ -1,6 +1,6 @@
 // BENCHMATES website interactions
 // Before launch, replace CONTACT_EMAIL with the official Benchmates email address.
-const CONTACT_EMAIL = "hello@benchmates.in";
+const CONTACT_EMAIL = "hellobenchmates@gmail.com";
 
 const menuToggle = document.querySelector("#menuToggle");
 const navLinks = document.querySelector("#navLinks");
@@ -69,7 +69,7 @@ if (contactForm) {
       `Hi Benchmates,\n\nMy name is ${name}.\nMy email or phone: ${contact}\nI'm interested in: ${interest}\n\nMy idea:\n${message || "I'd like to know more."}\n\nThank you.`
     );
 
-    if (CONTACT_EMAIL === "hello@benchmates.in") {
+    if (CONTACT_EMAIL === "hellobenchmates@gmail.com") {
       if (formNote) {
         formNote.textContent = "Demo contact email is still set. Open script.js and replace hello@benchmates.in with your official email before launch.";
       }
@@ -77,3 +77,42 @@ if (contactForm) {
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   });
 }
+
+const CACHE = "benchmates-v1";
+
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open(CACHE).then(cache =>
+      cache.addAll([
+        "./",
+        "./index.html",
+        "./style.css",
+        "./script.js",
+        "./logo.png"
+      ])
+    )
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.filter(key => key !== CACHE)
+          .map(key => caches.delete(key))
+      )
+    )
+  );
+  self.clients.claim();
+});
+
+self.addEventListener("fetch", event => {
+  if (event.request.method !== "GET") return;
+
+  event.respondWith(
+    fetch(event.request).catch(() =>
+      caches.match(event.request)
+    )
+  );
+});
